@@ -1,12 +1,57 @@
+body {
+    margin: 0;
+    background-color: #323232;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#content {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-container {
+    position: relative;
+}
+
 table {
     border-collapse: collapse;
 }
 
 td {
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
+    width: 120px;
+    height: 120px;
     text-align: center;
-    font-size: 48px;
-    font-family: Arial;
+    vertical-align: middle;
+    font-size: 64px;
+    color: white;
+    border: 5px solid white;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+td:first-child {
+    border-left: 0;
+}
+
+td:last-child {
+    border-right: 0;
+}
+
+tr:first-child td {
+    border-top: 0;
+}
+
+tr:last-child td {
+    border-bottom: 0;
 }
