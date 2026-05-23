@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 
 </head>
+
 <body onload="init()">
 
     <h1>Tic Tac Toe</h1>
 
+    <div class="circle_cross">
+
+        <svg class="player-circle" width="70" height="70" viewBox="0 0 70 70">
+            <circle cx="35" cy="35" r="30" stroke="#00aff0" stroke-width="6" fill="none" stroke-dasharray="188.5"
+                stroke-dashoffset="188.5">
+                <animate attributeName="stroke-dashoffset" from="188.5" to="0" dur="125ms" fill="freeze" />
+            </circle>
+        </svg>
+
+        <svg class="player-cross" width="70" height="70" viewBox="0 0 70 70">
+            <line x1="0" y1="0" x2="70" y2="70" stroke="#fec000" stroke-width="6" stroke-linecap="round"
+                stroke-dasharray="99" stroke-dashoffset="99">
+                <animate attributeName="stroke-dashoffset" from="99" to="0" dur="125ms" fill="freeze" />
+            </line>
+            <line x1="70" y1="0" x2="0" y2="70" stroke="#fec000" stroke-width="6" stroke-linecap="round"
+                stroke-dasharray="99" stroke-dashoffset="99">
+                <animate attributeName="stroke-dashoffset" from="99" to="0" dur="125ms" begin="125ms" fill="freeze" />
+            </line>
+        </svg>
+
+    </div>
+
+    <div id="status" class="status">Klicke auf ein Feld, um zu starten.</div>
+
     <div id="content"></div>
 
+    <button class="btn_again" onclick="restartGame()">play again</button>
+
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>
